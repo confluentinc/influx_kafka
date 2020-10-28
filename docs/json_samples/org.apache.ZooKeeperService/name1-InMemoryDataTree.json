@@ -1,0 +1,15 @@
+{
+  "request": {
+    "mbean": "org.apache.ZooKeeperService:name0=*,name1=*",
+    "type": "read"
+  },
+  "value": {
+    "org.apache.ZooKeeperService:name0=StandaloneServer_port2181,name1=InMemoryDataTree": {
+      "WatchCount": 66,
+      "NodeCount": 480,
+      "LastZxid": "0x374"
+    }
+  },
+  "timestamp": 1603909643,
+  "status": 200
+}

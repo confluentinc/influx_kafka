@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=Compressed Class Space,type=MemoryPool",
+    "attribute": "UsageThresholdCount",
+    "type": "read"
+  },
+  "value": 0,
+  "timestamp": 1603908076,
+  "status": 200
+}

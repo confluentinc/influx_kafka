@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'profiled nmethods',type=MemoryPool",
+    "attribute": "CollectionUsage",
+    "type": "read"
+  },
+  "value": null,
+  "timestamp": 1603906358,
+  "status": 200
+}

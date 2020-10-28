@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "SpecVendor",
+    "type": "read"
+  },
+  "value": "Oracle Corporation",
+  "timestamp": 1603900449,
+  "status": 200
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Survivor Space,type=MemoryPool",
+    "attribute": "MemoryManagerNames",
+    "type": "read"
+  },
+  "value": [
+    "G1 Old Generation",
+    "G1 Young Generation"
+  ],
+  "timestamp": 1603904697,
+  "status": 200
+}

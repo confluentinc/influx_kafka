@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=Metaspace,type=MemoryPool",
+    "attribute": "CollectionUsageThresholdSupported",
+    "type": "read"
+  },
+  "value": false,
+  "timestamp": 1603903840,
+  "status": 200
+}

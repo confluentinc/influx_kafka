@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "VmVendor",
+    "type": "read"
+  },
+  "value": "Azul Systems, Inc.",
+  "timestamp": 1603900786,
+  "status": 200
+}

@@ -1,0 +1,15 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'non-nmethods',type=MemoryPool",
+    "attribute": "Usage",
+    "type": "read"
+  },
+  "value": {
+    "init": 2555904,
+    "committed": 2555904,
+    "max": 5836800,
+    "used": 1186304
+  },
+  "timestamp": 1603905992,
+  "status": 200
+}

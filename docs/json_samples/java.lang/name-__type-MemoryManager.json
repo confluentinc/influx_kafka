@@ -1,0 +1,33 @@
+{
+  "request": {
+    "mbean": "java.lang:name=*,type=MemoryManager",
+    "type": "read"
+  },
+  "value": {
+    "java.lang:name=CodeCacheManager,type=MemoryManager": {
+      "MemoryPoolNames": [
+        "CodeHeap 'non-nmethods'",
+        "CodeHeap 'profiled nmethods'",
+        "CodeHeap 'non-profiled nmethods'"
+      ],
+      "Valid": true,
+      "Name": "CodeCacheManager",
+      "ObjectName": {
+        "objectName": "java.lang:name=CodeCacheManager,type=MemoryManager"
+      }
+    },
+    "java.lang:name=Metaspace Manager,type=MemoryManager": {
+      "MemoryPoolNames": [
+        "Metaspace",
+        "Compressed Class Space"
+      ],
+      "Valid": true,
+      "Name": "Metaspace Manager",
+      "ObjectName": {
+        "objectName": "java.lang:name=Metaspace Manager,type=MemoryManager"
+      }
+    }
+  },
+  "timestamp": 1603902412,
+  "status": 200
+}

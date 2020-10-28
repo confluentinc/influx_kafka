@@ -1,0 +1,15 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'profiled nmethods',type=MemoryPool",
+    "attribute": "PeakUsage",
+    "type": "read"
+  },
+  "value": {
+    "init": 2555904,
+    "committed": 7208960,
+    "max": 122908672,
+    "used": 7131136
+  },
+  "timestamp": 1603906392,
+  "status": 200
+}

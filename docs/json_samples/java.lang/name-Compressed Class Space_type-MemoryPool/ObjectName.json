@@ -1,0 +1,12 @@
+{
+  "request": {
+    "mbean": "java.lang:name=Compressed Class Space,type=MemoryPool",
+    "attribute": "ObjectName",
+    "type": "read"
+  },
+  "value": {
+    "objectName": "java.lang:name=Compressed Class Space,type=MemoryPool"
+  },
+  "timestamp": 1603908055,
+  "status": 200
+}

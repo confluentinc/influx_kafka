@@ -1,0 +1,12 @@
+{
+  "request": {
+    "mbean": "java.lang:name=Metaspace,type=MemoryPool",
+    "attribute": "MemoryManagerNames",
+    "type": "read"
+  },
+  "value": [
+    "Metaspace Manager"
+  ],
+  "timestamp": 1603903333,
+  "status": 200
+}

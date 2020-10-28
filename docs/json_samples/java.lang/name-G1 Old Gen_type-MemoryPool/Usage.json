@@ -1,0 +1,15 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Old Gen,type=MemoryPool",
+    "attribute": "Usage",
+    "type": "read"
+  },
+  "value": {
+    "init": 508559360,
+    "committed": 483393536,
+    "max": 536870912,
+    "used": 8551968
+  },
+  "timestamp": 1603907403,
+  "status": 200
+}

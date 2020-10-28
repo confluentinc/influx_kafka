@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "SpecName",
+    "type": "read"
+  },
+  "value": "Java Virtual Machine Specification",
+  "timestamp": 1603900732,
+  "status": 200
+}

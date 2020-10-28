@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Old Gen,type=MemoryPool",
+    "attribute": "UsageThresholdSupported",
+    "type": "read"
+  },
+  "value": true,
+  "timestamp": 1603907424,
+  "status": 200
+}

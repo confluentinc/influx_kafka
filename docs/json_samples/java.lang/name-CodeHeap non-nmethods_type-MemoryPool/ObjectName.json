@@ -1,0 +1,12 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'non-nmethods',type=MemoryPool",
+    "attribute": "ObjectName",
+    "type": "read"
+  },
+  "value": {
+    "objectName": "java.lang:name=CodeHeap 'non-nmethods',type=MemoryPool"
+  },
+  "timestamp": 1603905976,
+  "status": 200
+}

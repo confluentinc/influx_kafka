@@ -1,0 +1,28 @@
+{
+  "request": {
+    "mbean": "java.lang:type=OperatingSystem",
+    "type": "read"
+  },
+  "value": {
+    "OpenFileDescriptorCount": 144,
+    "CommittedVirtualMemorySize": 6497865728,
+    "FreePhysicalMemorySize": 16286375936,
+    "SystemLoadAverage": 0.67,
+    "Arch": "amd64",
+    "ProcessCpuLoad": 5.174978976647907E-4,
+    "FreeSwapSpaceSize": 8589930496,
+    "TotalPhysicalMemorySize": 67358416896,
+    "Name": "Linux",
+    "ObjectName": {
+      "objectName": "java.lang:type=OperatingSystem"
+    },
+    "TotalSwapSpaceSize": 8589930496,
+    "ProcessCpuTime": 1115800000000,
+    "MaxFileDescriptorCount": 1048576,
+    "SystemCpuLoad": 0.07128533540332492,
+    "Version": "5.4.0-51-generic",
+    "AvailableProcessors": 8
+  },
+  "timestamp": 1603899459,
+  "status": 200
+}

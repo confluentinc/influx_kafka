@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "VmVersion",
+    "type": "read"
+  },
+  "value": "11.0.8+10-LTS",
+  "timestamp": 1603900670,
+  "status": 200
+}

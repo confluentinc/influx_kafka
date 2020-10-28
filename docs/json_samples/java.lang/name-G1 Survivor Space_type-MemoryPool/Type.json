@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Survivor Space,type=MemoryPool",
+    "attribute": "Type",
+    "type": "read"
+  },
+  "value": "HEAP",
+  "timestamp": 1603905011,
+  "status": 200
+}

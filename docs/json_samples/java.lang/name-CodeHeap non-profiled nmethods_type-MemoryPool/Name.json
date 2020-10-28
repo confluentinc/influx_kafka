@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'non-profiled nmethods',type=MemoryPool",
+    "attribute": "Name",
+    "type": "read"
+  },
+  "value": "CodeHeap 'non-profiled nmethods'",
+  "timestamp": 1603906770,
+  "status": 200
+}

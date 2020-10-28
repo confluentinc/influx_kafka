@@ -1,0 +1,9 @@
+{
+  "request": {
+    "mbean": "com.sun.management:type=DiagnosticCommand",
+    "type": "read"
+  },
+  "value": {},
+  "timestamp": 1603908716,
+  "status": 200
+}

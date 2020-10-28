@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Survivor Space,type=MemoryPool",
+    "attribute": "CollectionUsageThreshold",
+    "type": "read"
+  },
+  "value": 0,
+  "timestamp": 1603904912,
+  "status": 200
+}

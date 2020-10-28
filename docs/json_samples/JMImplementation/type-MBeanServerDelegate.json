@@ -1,0 +1,17 @@
+{
+  "request": {
+    "mbean": "JMImplementation:type=MBeanServerDelegate",
+    "type": "read"
+  },
+  "value": {
+    "ImplementationName": "JMX",
+    "MBeanServerId": "9189d00fc9d4_1603635733891",
+    "ImplementationVersion": "11.0.8+10-LTS",
+    "SpecificationVersion": "1.4",
+    "SpecificationVendor": "Oracle Corporation",
+    "SpecificationName": "Java Management Extensions",
+    "ImplementationVendor": "Oracle Corporation"
+  },
+  "timestamp": 1603894599,
+  "status": 200
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "BootClassPathSupported",
+    "type": "read"
+  },
+  "value": false,
+  "timestamp": 1603900855,
+  "status": 200
+}

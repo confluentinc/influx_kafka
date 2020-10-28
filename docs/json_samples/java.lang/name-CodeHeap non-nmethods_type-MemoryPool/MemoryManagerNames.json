@@ -1,0 +1,12 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'non-nmethods',type=MemoryPool",
+    "attribute": "MemoryManagerNames",
+    "type": "read"
+  },
+  "value": [
+    "CodeCacheManager"
+  ],
+  "timestamp": 1603905968,
+  "status": 200
+}

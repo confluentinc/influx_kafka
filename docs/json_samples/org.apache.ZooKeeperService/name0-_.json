@@ -1,0 +1,36 @@
+{
+  "request": {
+    "mbean": "org.apache.ZooKeeperService:name0=*",
+    "type": "read"
+  },
+  "value": {
+    "org.apache.ZooKeeperService:name0=StandaloneServer_port2181": {
+      "PacketsReceived": 273058,
+      "PacketsSent": 273171,
+      "MaxSessionTimeout": 40000,
+      "AvgRequestLatency": 0,
+      "NumAliveConnections": 1,
+      "TickTime": 2000,
+      "MaxRequestLatency": 194,
+      "JuteMaxBufferSize": 1048575,
+      "StartTime": "Sun Oct 25 14:22:14 GMT 2020",
+      "ClientPort": "2181",
+      "OutstandingRequests": 0,
+      "MinClientResponseSize": 16,
+      "MaxClientCnxnsPerHost": 0,
+      "DataDirSize": 67108880,
+      "LastClientResponseSize": 16,
+      "FsyncThresholdExceedCount": 0,
+      "MinRequestLatency": 0,
+      "SecureClientAddress": "",
+      "Version": "3.5.8-f439ca583e70862c3068a1f2a7d4d068eec33315, built on 05\/04\/2020 15:53 GMT",
+      "MinSessionTimeout": 4000,
+      "TxnLogElapsedSyncTime": 9,
+      "MaxClientResponseSize": 2821,
+      "SecureClientPort": "",
+      "LogDirSize": 424
+    }
+  },
+  "timestamp": 1603909346,
+  "status": 200
+}

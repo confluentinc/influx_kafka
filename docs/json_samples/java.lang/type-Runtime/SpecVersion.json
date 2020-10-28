@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "SpecVersion",
+    "type": "read"
+  },
+  "value": "11",
+  "timestamp": 1603900823,
+  "status": 200
+}

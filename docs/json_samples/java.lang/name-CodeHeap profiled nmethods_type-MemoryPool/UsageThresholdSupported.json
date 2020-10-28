@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=CodeHeap 'profiled nmethods',type=MemoryPool",
+    "attribute": "UsageThresholdSupported",
+    "type": "read"
+  },
+  "value": true,
+  "timestamp": 1603906421,
+  "status": 200
+}

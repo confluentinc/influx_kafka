@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:name=G1 Old Gen,type=MemoryPool",
+    "attribute": "CollectionUsageThresholdExceeded",
+    "type": "read"
+  },
+  "value": false,
+  "timestamp": 1603907372,
+  "status": 200
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "ObjectName",
+    "type": "read"
+  },
+  "value": {
+    "objectName": "java.lang:type=Runtime"
+  },
+  "timestamp": 1603900767,
+  "status": 200
+}

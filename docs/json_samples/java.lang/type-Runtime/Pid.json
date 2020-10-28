@@ -1,0 +1,10 @@
+{
+  "request": {
+    "mbean": "java.lang:type=Runtime",
+    "attribute": "Pid",
+    "type": "read"
+  },
+  "value": 1,
+  "timestamp": 1603900660,
+  "status": 200
+}
