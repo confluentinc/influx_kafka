@@ -1,1 +1,0 @@
-# ksqlDB JMX Metrics

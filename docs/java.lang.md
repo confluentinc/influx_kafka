@@ -1,12 +1,20 @@
-# Java JVM-related JMX Metrics
-
-## java.lang
+# java.lang
 
 Provides classes that are fundamental to the design of the Java programming language.
 
-### ClassLoading
+Applies to the following components:
 
-#### Values
+* Zookeeper
+* Kafka
+* ksqlDB
+* Kafka Connect
+* Confluent Control Center
+* Confluent Schema Registry
+* Confluent REST Proxy
+
+## ClassLoading
+
+### Values
 
 Value | Semantic | Description
 --- | --- | ---
@@ -14,7 +22,7 @@ LoadedClassCount | quantity | The number of classes currently loaded in the JVM.
 TotalLoadedClassCount | totalcounter | The number of classes that have been loaded since the JVM was started.
 UnloadedClassCount | totalcounter | Classes are unloaded when the Classloader that loaded them is garbage-collected. This is the number of classes that have been unloaded from the JVM since it was started.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -23,15 +31,15 @@ UnloadedClassCount | totalcounter | Classes are unloaded when the Classloader th
   paths = ["LoadedClassCount","UnloadedClassCount","TotalLoadedClassCount"]
 ```
 
-### Compilation
+## Compilation
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
 TotalCompilationTime | timeticks | milliseconds | The accumulated time spent in just-in-time (JIT) compilation.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -40,22 +48,22 @@ TotalCompilationTime | timeticks | milliseconds | The accumulated time spent in 
   paths = ["TotalCompilationTime"]
 ```
 
-### GarbageCollector
+## GarbageCollector
 
-#### Tags
+### Tags
 
 Tag | Description
 --- | ---
 name | Possible values incl. `G1 Old Generation`, `G1 Young Generation`
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
 CollectionCount | totalcounter |  | The number of garbage collection events fired since the JVM was launched.
 CollectionTime | timeticks | milliseconds | The total time spent doing garbage collection.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -65,9 +73,9 @@ CollectionTime | timeticks | milliseconds | The total time spent doing garbage c
   tag_keys = ["name"]
 ```
 
-### Memory
+## Memory
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
@@ -81,7 +89,7 @@ NonHeapMemoryUsage.max | quantity | bytes | The maximum amount of non-heap that 
 NonHeapMemoryUsage.used | quantity | bytes | The current non-heap memory used.
 ObjectPendingFinalizationCount | quantity |  | Approximate number of objects that are pending finalization.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -90,9 +98,9 @@ ObjectPendingFinalizationCount | quantity |  | Approximate number of objects tha
   paths = ["ObjectPendingFinalizationCount","HeapMemoryUsage","NonHeapMemoryUsage"]
 ```
 
-### OperatingSystem
+## OperatingSystem
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
@@ -109,7 +117,7 @@ SystemLoadAverage | quantity |  | The average load of the host system.
 TotalPhysicalMemorySize | quantity | bytes | The host memory size.
 TotalSwapSpaceSize | quantity | bytes | The host swap memory size.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -118,16 +126,16 @@ TotalSwapSpaceSize | quantity | bytes | The host swap memory size.
   paths = ["OpenFileDescriptorCount","CommittedVirtualMemorySize","FreePhysicalMemorySize","SystemLoadAverage","ProcessCpuLoad","FreeSwapSpaceSize","TotalPhysicalMemorySize","TotalSwapSpaceSize","ProcessCpuTime","MaxFileDescriptorCount","SystemCpuLoad","AvailableProcessors"]
 ```
 
-### Runtime
+## Runtime
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
 StartTime | epochticks | milliseconds | Time JVM started in the Unix Epoch format.
 Uptime | timeticks | milliseconds | Number of milliseconds the JVM has been running.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -136,9 +144,9 @@ Uptime | timeticks | milliseconds | Number of milliseconds the JVM has been runn
   paths = ["Uptime","StartTime"]
 ```
 
-### Threading
+## Threading
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
@@ -149,7 +157,7 @@ PeakThreadCount | quantity |  | The peak live thread count since the JVM started
 ThreadCount | quantity |  | The current number of live threads including both daemon and non-daemon threads.
 TotalStartedThreadCount | totalcounter |  | The total number of threads created and also started since the JVM started.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
@@ -158,15 +166,15 @@ TotalStartedThreadCount | totalcounter |  | The total number of threads created 
   paths = ["TotalStartedThreadCount","CurrentThreadUserTime","PeakThreadCount","CurrentThreadCpuTime","ThreadCount","DaemonThreadCount"]
 ```
 
-### MemoryPool
+## MemoryPool
 
-#### Tags
+### Tags
 
 Tag | Description
 --- | ---
 name | Possible values incl. `Code Cache`, `CodeHeap 'non-nmethods'`, `CodeHeap 'non-profiled nmethods'`, `CodeHeap 'profiled nmethods'`, `Compressed Class Space`, `G1 Eden Space`, `G1 Old Gen`, `G1 Survivor Space`, `Metaspace`
 
-#### Values
+### Values
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
@@ -183,40 +191,12 @@ Usage.init | quantity | bytes | An estimate of the initial usage of a memory poo
 Usage.max | quantity | bytes | An estimate of the maximum usage of a memory pool.
 Usage.used | quantity | bytes | An estimate of the current usage of a memory pool. For a garbage-collected memory pool, the amount of used memory includes the memory occupied by all objects in the pool including both reachable and unreachable objects.
 
-#### Telegraf Field Configuration
+### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
   name = "java.lang_MemoryPool"
   mbean = "java.lang:name=*,type=MemoryPool"
   paths = ["Usage","PeakUsage","CollectionUsage"]
-  tag_keys = ["name"]
-```
-
-## java.nio
-
-### BufferPool
-
-#### Tags
-
-Tag | Description
---- | ---
-name | Possible values incl. `direct`, `mapped`
-
-#### Values
-
-Value | Semantic | Unit | Description
---- | --- | --- | ---
-Count | quantity |  | An estimate of the number of buffers in the pool.
-MemoryUsed | quantity | bytes | An estimate of the memory that the JVM is using for this buffer pool.
-TotalCapacity | quantity | bytes | An estimate of the total capacity of the buffers in this pool.
-
-#### Telegraf Field Configuration
-
-```toml
-[[inputs.jolokia2_agent.metric]]
-  name = "java.nio"
-  mbean = "java.nio:name=*,type=BufferPool"
-  paths = ["TotalCapacity","MemoryUsed","Count"]
   tag_keys = ["name"]
 ```

@@ -1,1 +1,0 @@
-# Kafka Connect JMX Metrics
