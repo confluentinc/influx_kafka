@@ -49,6 +49,15 @@ process-total | totalcounter |  | The total number of calls to process.
 record-e2e-latency-max | timeticks | milliseconds | The maximum end-to-end latency of a record, measuring by comparing the record timestamp with the system time when it has been fully processed by the node.
 record-e2e-latency-min | timeticks | milliseconds | The minimum end-to-end latency of a record, measuring by comparing the record timestamp with the system time when it has been fully processed by the node.
 
+### Telegraf Field Configuration
+
+```toml
+[[inputs.jolokia2_agent.metric]]
+  name = "kafka.streams_stream-processor-node-metrics"
+  mbean = "kafka.streams:processor-node-id=*,task-id=*,thread-id=*,type=stream-processor-node-metrics"
+  tag_keys = ["processor-node-id","task-id","thread-id"]
+```
+
 ## stream-record-cache-metrics
 
 ### Tags
@@ -74,15 +83,6 @@ hit-ratio-min | percentage | The minimum cache hit ratio.
   name = "kafka.streams_stream-record-cache-metrics"
   mbean = "kafka.streams:record-cache-id=*,task-id=*,thread-id=*,type=stream-record-cache-metrics"
   tag_keys = ["record-cache-id","task-id","thread-id"]
-```
-
-### Telegraf Field Configuration
-
-```toml
-[[inputs.jolokia2_agent.metric]]
-  name = "kafka.streams_stream-processor-node-metrics"
-  mbean = "kafka.streams:processor-node-id=*,task-id=*,thread-id=*,type=stream-processor-node-metrics"
-  tag_keys = ["processor-node-id","task-id","thread-id"]
 ```
 
 ## stream-state-metrics (in-memory-lru-state)
@@ -131,7 +131,7 @@ restore-latency-max | timeticks | milliseconds | The maximum latency of restorat
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
-  name = "kafka.streams_stream-state-metrics"
+  name = "kafka.streams_stream-state-metrics_in-memory-lru-state"
   mbean = "kafka.streams:in-memory-lru-state-id=*,task-id=*,thread-id=*,type=stream-state-metrics"
   tag_keys = ["in-memory-lru-state-id","task-id","thread-id"]
 ```
@@ -198,7 +198,7 @@ write-stall-duration-total | timeticks | milliseconds | Total duration of write 
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
-  name = "kafka.streams_stream-state-metrics"
+  name = "kafka.streams_stream-state-metrics_rocksdb-state"
   mbean = "kafka.streams:rocksdb-state-id=*,task-id=*,thread-id=*,type=stream-state-metrics"
   tag_keys = ["rocksdb-state-id","task-id","thread-id"]
 ```
@@ -250,7 +250,7 @@ write-stall-duration-total | timeticks | milliseconds | Total duration of write 
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
-  name = "kafka.streams_stream-state-metrics"
+  name = "kafka.streams_stream-state-metrics_rocksdb-window-state"
   mbean = "kafka.streams:rocksdb-window-state-id=*,task-id=*,thread-id=*,type=stream-state-metrics"
   tag_keys = ["rocksdb-window-state-id","task-id","thread-id"]
 ```
