@@ -19,5 +19,5 @@ cleaner-io.Count | totalcounter | The count of times that cleaner-io was throttl
   name = "kafka.utils_Throttler"
   mbean = "kafka.utils:name=cleaner-io,type=Throttler"
   paths = ["Count"]
-  field_prefix = "$1."
+  field_prefix = "cleaner-io."
 ```

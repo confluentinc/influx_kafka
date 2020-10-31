@@ -38,14 +38,15 @@ NumLogSegments | quantity |  | The number of log segments.
 
 Value | Semantic | Unit | Description
 --- | --- | --- | ---
-Count | totalcounter |  | The number of log flushes.
+LogFlushes | totalcounter |  | The number of log flushes.
 
 ### Telegraf Field Configuration
 
 ```toml
 [[inputs.jolokia2_agent.metric]]
   name = "kafka.log_LogFlushStats"
-  mbean = "kafka.log:name=*,type=LogFlushStats"
+  mbean = "kafka.log:name=LogFlushRateAndTimeMs,type=LogFlushStats"
+  field_name = "LogFlushes"
   paths = ["Count"]
 ```
 

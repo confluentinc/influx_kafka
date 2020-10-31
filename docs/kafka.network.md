@@ -198,9 +198,9 @@ listener | The name of the listener.
 
 ### Values
 
-Value | Semantic | Unit | Description
---- | --- | --- | ---
-AcceptorBlockedTime | timeticks | nanoseconds | The total amount of time that the acceptor was blocked.
+Value | Semantic | Description
+--- | --- | ---
+AcceptorBlockedPercent | percent | The percentage of time that the acceptor was blocked.
 
 ### Telegraf Field Configuration
 
@@ -208,7 +208,7 @@ AcceptorBlockedTime | timeticks | nanoseconds | The total amount of time that th
 [[inputs.jolokia2_agent.metric]]
   name = "kafka.network_Acceptor"
   mbean = "kafka.network:listener=*,name=AcceptorBlockedPercent,type=Acceptor"
-  paths = ["Count"]
-  field_prefix = "AcceptorBlockedTime"
+  paths = ["OneMinuteRate"]
+  field_prefix = "AcceptorBlockedPercent"
   tag_keys = ["listener"]
 ```
