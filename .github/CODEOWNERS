@@ -1,0 +1,4 @@
+# See go/codeowners - automatically generated for confluentinc/influx_kafka:
+*	@confluentinc/csid-admins
+*	@confluentinc/csid-contributors
+*	@confluentinc/csid-reviewers
